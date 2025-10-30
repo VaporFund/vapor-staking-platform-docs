@@ -34,9 +34,9 @@ graph LR
     ETH -.Real-time tracking.-> WEB
     WEB -.Dashboard.-> U
 
-    style U fill:#9cf,stroke:#333,stroke-width:2px
-    style SAFE fill:#f96,stroke:#333,stroke-width:3px
-    style ETH fill:#fc9,stroke:#333,stroke-width:2px
+    style U fill:#e8e8e8,stroke:#333,stroke-width:2px,color:#000
+    style SAFE fill:#b0b0b0,stroke:#333,stroke-width:3px,color:#000
+    style ETH fill:#d0d0d0,stroke:#333,stroke-width:2px,color:#000
 ```
 
 ---
@@ -77,9 +77,9 @@ graph TB
     Note2[✅ Requires 3 signatures to move]
     Note3[✅ No single person can access funds]
 
-    style USER fill:#9cf,stroke:#333,stroke-width:2px
-    style MULTISIG fill:#f96,stroke:#333,stroke-width:4px
-    style CONTRACT fill:#fc9,stroke:#333,stroke-width:2px
+    style USER fill:#e8e8e8,stroke:#333,stroke-width:2px,color:#000
+    style MULTISIG fill:#b0b0b0,stroke:#333,stroke-width:4px,color:#000
+    style CONTRACT fill:#d0d0d0,stroke:#333,stroke-width:2px,color:#000
 ```
 
 ---
@@ -137,10 +137,10 @@ graph TB
     VF -.soon.-> STETH
     VF -.planned.-> MORE
 
-    style VF fill:#f9f,stroke:#333,stroke-width:4px
-    style USDC fill:#9f9,stroke:#333,stroke-width:2px
-    style ETH fill:#9cf,stroke:#333,stroke-width:2px
-    style STETH fill:#fc9,stroke:#333,stroke-width:2px
+    style VF fill:#b8b8b8,stroke:#333,stroke-width:4px,color:#000
+    style USDC fill:#e8e8e8,stroke:#333,stroke-width:2px,color:#000
+    style ETH fill:#d8d8d8,stroke:#333,stroke-width:2px,color:#000
+    style STETH fill:#d0d0d0,stroke:#333,stroke-width:2px,color:#000
 ```
 
 ---
@@ -159,7 +159,6 @@ gantt
 
     section Q1 2026
     More Tokens (USDT, ETH, etc)   :q1, 2026-01, 2026-03
-    Mobile App                 :q1, 2026-01, 2026-03
     Leaderboard & Rewards      :q1, 2026-01, 2026-03
 
     section Q2 2026
@@ -209,10 +208,10 @@ graph TB
     VF -.2026.-> ETHERFI
     VF -.2026.-> FIRE
 
-    style VF fill:#f9f,stroke:#333,stroke-width:4px
-    style OZ fill:#9cf,stroke:#333,stroke-width:2px
-    style GNOSIS fill:#f96,stroke:#333,stroke-width:2px
-    style LIDO fill:#fc9,stroke:#333,stroke-width:2px
+    style VF fill:#b8b8b8,stroke:#333,stroke-width:4px,color:#000
+    style OZ fill:#d8d8d8,stroke:#333,stroke-width:2px,color:#000
+    style GNOSIS fill:#b0b0b0,stroke:#333,stroke-width:2px,color:#000
+    style LIDO fill:#d0d0d0,stroke:#333,stroke-width:2px,color:#000
 ```
 
 ---
@@ -246,11 +245,11 @@ graph TD
     SAFE["🛡️ Your Funds Are Protected"]
     MON --> SAFE
 
-    style SC fill:#9cf,stroke:#333,stroke-width:2px
-    style MS fill:#f96,stroke:#333,stroke-width:2px
-    style INF fill:#9f9,stroke:#333,stroke-width:2px
-    style MON fill:#fc9,stroke:#333,stroke-width:2px
-    style SAFE fill:#f9f,stroke:#333,stroke-width:4px
+    style SC fill:#d8d8d8,stroke:#333,stroke-width:2px,color:#000
+    style MS fill:#b0b0b0,stroke:#333,stroke-width:2px,color:#000
+    style INF fill:#e8e8e8,stroke:#333,stroke-width:2px,color:#000
+    style MON fill:#d0d0d0,stroke:#333,stroke-width:2px,color:#000
+    style SAFE fill:#b8b8b8,stroke:#333,stroke-width:4px,color:#000
 ```
 
 ---
@@ -282,9 +281,9 @@ graph LR
     VF --> BENEFIT3
     VF --> BENEFIT4
 
-    style BANKS fill:#ddd,stroke:#333,stroke-width:1px
-    style VF fill:#f9f,stroke:#333,stroke-width:4px
-    style BENEFIT1 fill:#9f9,stroke:#333,stroke-width:2px
+    style BANKS fill:#e0e0e0,stroke:#333,stroke-width:1px,color:#000
+    style VF fill:#b8b8b8,stroke:#333,stroke-width:4px,color:#000
+    style BENEFIT1 fill:#e8e8e8,stroke:#333,stroke-width:2px,color:#000
 ```
 
 ---
@@ -316,11 +315,11 @@ graph TB
 
     VF_SHARE --> REINVEST
 
-    style STAKE fill:#9cf,stroke:#333,stroke-width:2px
-    style DEFI fill:#fc9,stroke:#333,stroke-width:2px
-    style USER_SHARE fill:#9f9,stroke:#333,stroke-width:3px
-    style VF_SHARE fill:#f9f,stroke:#333,stroke-width:2px
-    style REINVEST fill:#ff9,stroke:#333,stroke-width:2px
+    style STAKE fill:#d8d8d8,stroke:#333,stroke-width:2px,color:#000
+    style DEFI fill:#d0d0d0,stroke:#333,stroke-width:2px,color:#000
+    style USER_SHARE fill:#e8e8e8,stroke:#333,stroke-width:3px,color:#000
+    style VF_SHARE fill:#b8b8b8,stroke:#333,stroke-width:2px,color:#000
+    style REINVEST fill:#f0f0f0,stroke:#333,stroke-width:2px,color:#000
 ```
 
 ---
@@ -353,12 +352,12 @@ graph TB
 
     COMP -.We're Better.-> VF
 
-    style VF fill:#f9f,stroke:#333,stroke-width:4px
-    style ADV1 fill:#f96,stroke:#333,stroke-width:2px
-    style ADV2 fill:#9cf,stroke:#333,stroke-width:2px
-    style ADV3 fill:#fc9,stroke:#333,stroke-width:2px
-    style ADV4 fill:#9f9,stroke:#333,stroke-width:2px
-    style ADV5 fill:#9cf,stroke:#333,stroke-width:2px
+    style VF fill:#b8b8b8,stroke:#333,stroke-width:4px,color:#000
+    style ADV1 fill:#b0b0b0,stroke:#333,stroke-width:2px,color:#000
+    style ADV2 fill:#d8d8d8,stroke:#333,stroke-width:2px,color:#000
+    style ADV3 fill:#d0d0d0,stroke:#333,stroke-width:2px,color:#000
+    style ADV4 fill:#e8e8e8,stroke:#333,stroke-width:2px,color:#000
+    style ADV5 fill:#d8d8d8,stroke:#333,stroke-width:2px,color:#000
 ```
 
 ---
@@ -401,8 +400,7 @@ Q4 2025 ━━━━━━━━━┓
                  ┃  ✅ Launch Platform
                  ┃  ✅ ETH Staking Live
                  ┃
-Q1 2026 ━━━━━━━━━┫  📱 Mobile App
-                 ┃  💵 USDC & USDT
+Q1 2026 ━━━━━━━━━┫  💵 USDC & USDT
                  ┃  🏆 Rewards Program
                  ┃
 Q2 2026 ━━━━━━━━━┫  📈 Higher Yields

@@ -578,7 +578,7 @@ As the platform evolves through our roadmap—from leaderboards to EtherFi resta
 
 **Official Links**
 
-- Website: https://staking.vaporfund.com (pending DNS)
+- Website: https://staking.vaporfund.com
 - API: https://staking-api.vaporfund.com
 - Documentation: `@docs/` (GitHub repository)
 - GitHub: (private repositories)
@@ -587,13 +587,6 @@ As the platform evolves through our roadmap—from leaderboards to EtherFi resta
 
 - Mainnet: `0x089fa7705f6dea9ccc70c912029a0a442b2ced71`
 - Sepolia: `0x508e7698c9fE9214b2aaF3Da5149849CbCBeE009`
-
-**Technical Documentation**
-
-- Smart Contracts: `/src/smartcontracts/`
-- Backend API: `/src/backend/` + Swagger at `/api/v1/docs`
-- Frontend: `/src/frontend/`
-- Admin Dashboard: `/src/admin/`
 
 **Support**
 
