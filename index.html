@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VaporFund Staking Platform - Multi-token staking with secure MultiSig wallet integration">
+    <title>VaporFund Staking Platform Documentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #667eea;
+            --primary-dark: #5568d3;
+            --secondary: #764ba2;
+            --text: #2d3748;
+            --text-light: #718096;
+            --bg: #f7fafc;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background: var(--white);
+            padding: 1rem 2rem;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            background: var(--white);
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--primary);
+        }
+
+        h3 {
+            color: var(--text);
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .feature-card {
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f6f8fb 0%, #ffffff 100%);
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .feature-card h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .tech-badge {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .contract-info {
+            background: #edf2f7;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            word-break: break-all;
+        }
+
+        .contract-info strong {
+            color: var(--primary);
+        }
+
+        code {
+            background: #2d3748;
+            color: #68d391;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+
+        pre {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
+        pre code {
+            background: transparent;
+            padding: 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin: 0.5rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+
+        .status-live {
+            background: #48bb78;
+            color: white;
+        }
+
+        .status-dev {
+            background: #ed8936;
+            color: white;
+        }
+
+        footer {
+            background: #2d3748;
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>VaporFund Staking Platform</h1>
+        <p>Decentralized Multi-Token Staking with Secure MultiSig Integration</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#architecture">Architecture</a></li>
+            <li><a href="#contracts">Smart Contracts</a></li>
+            <li><a href="#deployment">Deployment</a></li>
+            <li><a href="#partners">Partners Program</a></li>
+            <li><a href="#getting-started">Getting Started</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="overview">
+            <h2>Overview</h2>
+            <p>VaporFund Staking Platform is a decentralized multi-token staking application built as a monorepo using Git submodules. The platform allows users to stake multiple whitelisted ERC20 tokens and ETH, with all funds automatically routed to a MultiSig wallet for enhanced security.</p>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>🔒 Secure</h4>
+                    <p>All funds routed to MultiSig wallet with ReentrancyGuard and Pausable patterns</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🪙 Multi-Token</h4>
+                    <p>Support for multiple whitelisted ERC20 tokens and ETH deposits</p>
+                </div>
+                <div class="feature-card">
+                    <h4>⚡ Real-Time</h4>
+                    <p>WebSocket support for live updates and blockchain event monitoring</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🎯 Admin Control</h4>
+                    <p>Comprehensive admin dashboard for platform management and analytics</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="features">
+            <h2>Key Features</h2>
+
+            <h3>Smart Contract Features</h3>
+            <ul>
+                <li>Multi-token staking with whitelisted ERC20 tokens</li>
+                <li>ETH deposits (automatically wrapped to WETH)</li>
+                <li>Automatic fund routing to MultiSig wallet</li>
+                <li>Admin-controlled withdrawal allocation system</li>
+                <li>Security patterns: ReentrancyGuard, Pausable, AccessControl</li>
+                <li>No upgradeability (intentional design choice for security)</li>
+            </ul>
+
+            <h3>Backend Features</h3>
+            <ul>
+                <li>Dual authentication: SIWE (Web3) and Google OAuth2</li>
+                <li>JWT tokens with refresh rotation</li>
+                <li>Full smart contract integration with ethers.js v6</li>
+                <li>RESTful API with Swagger documentation</li>
+                <li>86 comprehensive tests</li>
+                <li>Optimized blockchain sync (30-min intervals, last 50 blocks)</li>
+            </ul>
+
+            <h3>Frontend Features</h3>
+            <ul>
+                <li>RainbowKit for wallet connection</li>
+                <li>wagmi + ethers.js for blockchain interaction</li>
+                <li>Next.js 14 with App Router</li>
+                <li>Support for MetaMask and localhost networks</li>
+                <li>Real-time staking interface</li>
+            </ul>
+
+            <h3>Partners & Referral System</h3>
+            <ul>
+                <li>Multi-tier partner program with commission structure</li>
+                <li>User referral rewards system</li>
+                <li>Partner dashboard with analytics and tracking</li>
+                <li>Automated commission calculations</li>
+            </ul>
+        </section>
+
+        <section id="architecture">
+            <h2>Architecture</h2>
+
+            <h3>Technology Stack</h3>
+            <div class="tech-stack">
+                <span class="tech-badge">Next.js 14</span>
+                <span class="tech-badge">NestJS 11</span>
+                <span class="tech-badge">Solidity</span>
+                <span class="tech-badge">Hardhat</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">Redis</span>
+                <span class="tech-badge">Docker</span>
+                <span class="tech-badge">Kubernetes</span>
+                <span class="tech-badge">TypeScript</span>
+                <span class="tech-badge">ethers.js</span>
+            </div>
+
+            <h3>Monorepo Structure</h3>
+            <pre><code>vaporfund-staking-platform/
+├── src/
+│   ├── backend/         # NestJS API server (v1.0.1)
+│   ├── frontend/        # Next.js web app (v1.0.0)
+│   ├── smartcontracts/  # Solidity contracts
+│   ├── admin/           # Admin dashboard (v1.0.3)
+│   ├── partner-portal/  # Partner management
+│   ├── widget/          # Embeddable widget
+│   └── docs/            # Documentation
+├── infrastructure/
+│   └── environments/
+│       ├── local/       # Docker Compose dev
+│       ├── staging/     # GKE staging
+│       └── production/  # GKE production
+└── Makefile             # Unified commands</code></pre>
+
+            <h3>Key Components</h3>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>Backend</h4>
+                    <p>NestJS 11 API with PostgreSQL, Redis, dual auth (SIWE/OAuth2), and blockchain sync</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Frontend</h4>
+                    <p>Next.js 14 App Router with RainbowKit, wagmi, and real-time Web3 integration</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Smart Contracts</h4>
+                    <p>Solidity with Hardhat, OpenZeppelin libraries, comprehensive test suite</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Admin Dashboard</h4>
+                    <p>React + TypeScript with Material-UI, Redux Toolkit for state management</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contracts">
+            <h2>Smart Contracts</h2>
+
+            <h3>Main Contract: VaporFundStaking.sol</h3>
+            <p>The core staking contract implements secure multi-token staking with automatic MultiSig routing.</p>
+
+            <div class="contract-info">
+                <strong>Mainnet:</strong> 0x089fa7705f6dea9ccc70c912029a0a442b2ced71<br>
+                <strong>Sepolia:</strong> 0x508e7698c9fE9214b2aaF3Da5149849CbCBeE009
+            </div>
+
+            <h3>Key Functions</h3>
+            <ul>
+                <li><code>whitelistToken(address, minDeposit, maxDeposit)</code> - Add token to whitelist</li>
+                <li><code>depositToken(address, amount)</code> - Deposit ERC20 tokens</li>
+                <li><code>depositETH()</code> - Deposit ETH (wrapped to WETH)</li>
+                <li><code>allocateWithdrawal(user, token, amount, nonce)</code> - Admin allocates withdrawal</li>
+                <li><code>processWithdrawal(withdrawalId)</code> - User claims allocated withdrawal</li>
+            </ul>
+
+            <h3>Security Features</h3>
+            <ul>
+                <li>ReentrancyGuard protection</li>
+                <li>Pausable emergency stop</li>
+                <li>AccessControl for admin functions</li>
+                <li>Automatic MultiSig routing</li>
+                <li>No upgradeability (immutable for security)</li>
+            </ul>
+        </section>
+
+        <section id="deployment">
+            <h2>Deployment</h2>
+
+            <h3>Production Environment <span class="status-badge status-live">LIVE</span></h3>
+            <div class="contract-info">
+                <strong>Backend API:</strong> https://staking-api.vaporfund.com (v1.0.1)<br>
+                <strong>Frontend:</strong> https://staking.vaporfund.com (v1.0.0 - pending DNS)<br>
+                <strong>Admin Dashboard:</strong> https://admin.vaporfund.com (v1.0.3)<br>
+                <strong>Load Balancer:</strong> 34.87.142.126<br>
+                <strong>Platform:</strong> Google Kubernetes Engine (GKE)<br>
+                <strong>Namespace:</strong> pic-vaporfund
+            </div>
+
+            <h3>Staging Environment <span class="status-badge status-dev">DEV</span></h3>
+            <div class="contract-info">
+                <strong>Frontend:</strong> https://staking-vaporfund.insitemedia.co.th<br>
+                <strong>Load Balancer:</strong> 35.197.132.49<br>
+                <strong>Namespace:</strong> pic-vaporfund-staging
+            </div>
+
+            <h3>Quick Deploy Commands</h3>
+            <pre><code># Staging deployment
+make deploy ENV=staging
+
+# Production deployment (with confirmation)
+make deploy ENV=production
+
+# Direct production deployment
+gcloud container clusters get-credentials autopilot-cluster-main --zone asia-southeast1
+docker buildx build --platform linux/amd64 \
+  -f infrastructure/environments/production/dockerfiles/Dockerfile.frontend \
+  -t gcr.io/pic-all-services/vaporfund-staking-production/frontend:latest \
+  --push .
+kubectl set image deployment/frontend \
+  frontend=gcr.io/pic-all-services/vaporfund-staking-production/frontend:latest \
+  -n pic-vaporfund</code></pre>
+        </section>
+
+        <section id="partners">
+            <h2>Partners Program</h2>
+            <p>VaporFund offers a comprehensive partner program with multiple tiers and commission structures.</p>
+
+            <h3>Partner Tiers</h3>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>🥉 Bronze Partner</h4>
+                    <p>Entry-level tier with basic commission rates and partner portal access</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🥈 Silver Partner</h4>
+                    <p>Enhanced commissions with advanced analytics and priority support</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🥇 Gold Partner</h4>
+                    <p>Premium tier with highest commission rates and dedicated account management</p>
+                </div>
+            </div>
+
+            <h3>User Referral Rewards</h3>
+            <p>Users can earn rewards by referring new stakers to the platform. The referral system tracks conversions and automatically calculates rewards based on referred users' staking activity.</p>
+
+            <p><a href="PARTNERS_PROGRAM.md" class="btn">Full Partner Documentation</a></p>
+        </section>
+
+        <section id="getting-started">
+            <h2>Getting Started</h2>
+
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>Node.js 18+ and Yarn</li>
+                <li>Docker and Docker Compose</li>
+                <li>Git with SSH keys configured</li>
+                <li>MetaMask or compatible Web3 wallet</li>
+            </ul>
+
+            <h3>Quick Start</h3>
+            <pre><code># Clone repository
+git clone git@github.com:VaporFund/vaporfund-staking-platform.git
+cd vaporfund-staking-platform
+
+# Initial setup (clones submodules and installs dependencies)
+make setup
+
+# Start all services with Docker
+make docker-up
+
+# Or run services individually
+make dev
+
+# Access services
+# Frontend: http://localhost:3000
+# Backend API: http://localhost:3001
+# Admin Dashboard: http://localhost:3002
+# Hardhat Node: http://localhost:8545</code></pre>
+
+            <h3>Essential Commands</h3>
+            <pre><code># Development
+make dev                     # Run all services
+make backend-dev             # Backend only
+make frontend-dev            # Frontend only
+make admin-dev               # Admin only
+
+# Docker
+make docker-up               # Start all services
+make docker-logs             # View logs
+make docker-down             # Stop services
+
+# Testing
+make test                    # Run all tests
+make lint                    # Lint all code
+make typecheck               # TypeScript checks
+
+# Smart Contracts
+make compile                 # Compile contracts
+make deploy-local            # Deploy to local network
+make deploy-testnet          # Deploy to Sepolia</code></pre>
+
+            <h3>Documentation</h3>
+            <div style="margin: 1.5rem 0;">
+                <a href="README.md" class="btn">README</a>
+                <a href="ARCHITECTURE.md" class="btn">Architecture Guide</a>
+                <a href="WHITEPAPER.md" class="btn">Whitepaper</a>
+                <a href="PARTNERS_PROGRAM.md" class="btn">Partners Program</a>
+                <a href="https://github.com/VaporFund/vaporfund-staking-platform" class="btn">GitHub Repository</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 VaporFund. All rights reserved.</p>
+        <p>
+            <a href="https://github.com/VaporFund/vaporfund-staking-platform">GitHub</a> |
+            <a href="https://staking-api.vaporfund.com/api/v1/docs">API Documentation</a> |
+            <a href="mailto:support@vaporfund.com">Support</a>
+        </p>
+    </footer>
+</body>
+</html>
