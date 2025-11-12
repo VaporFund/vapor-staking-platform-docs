@@ -30,6 +30,8 @@ This directory contains comprehensive technical documentation for the VaporFund 
 - Platform architecture and design decisions
 - Smart contract specifications
 - API documentation
+- Partner integration and external APIs
+- User referrals and rewards program
 - Business model and tokenomics
 - Security measures and risk management
 - Deployment and infrastructure guides
@@ -44,6 +46,8 @@ This directory contains comprehensive technical documentation for the VaporFund 
 | -------------------------------------- | ----------------------------------------------- | --------------------------------------- |
 | **[WHITEPAPER.md](WHITEPAPER.md)**     | Platform vision, business model, and tokenomics | Investors, Stakeholders, General Public |
 | **[ARCHITECTURE.md](ARCHITECTURE.md)** | Technical architecture and visual diagrams      | Developers, Partners, Technical Teams   |
+| **[EARNING.md](EARNING.md)**           | Affiliate and partner earning programs          | Affiliates, Partners, Content Creators  |
+| **[ROADMAP.md](ROADMAP.md)**           | Product roadmap and development milestones      | Stakeholders, Investors, Community      |
 
 ---
 
@@ -60,8 +64,8 @@ This directory contains comprehensive technical documentation for the VaporFund 
 
 1. Read **[WHITEPAPER.md](WHITEPAPER.md)** for business vision
 2. Review tokenomics and reward distribution model
-3. Understand security architecture and risk management
-4. Check the roadmap and future development plans
+3. Check **[ROADMAP.md](ROADMAP.md)** for development milestones
+4. Understand security architecture and risk management
 
 ### For Operations Teams
 
@@ -80,7 +84,10 @@ This directory contains comprehensive technical documentation for the VaporFund 
 - **Architecture Overview**: [ARCHITECTURE.md](ARCHITECTURE.md) - System design and component interaction
 - **Smart Contracts**: Solidity contract specifications and deployment
 - **Backend API**: NestJS architecture and endpoint documentation
-- **Frontend**: Next.js 14 App Router implementation
+- **Frontend**: Next.js 14 App Router implementation with Web3 wallet integration
+- **User Referrals**: Built-in referral system with rewards and leaderboards
+- **Vapor Dashboard**: Next.js 15 partner integration dashboard
+- **Admin Dashboard**: React admin management interface
 - **Infrastructure**: GKE deployment and Docker configuration
 
 </details>
@@ -91,17 +98,32 @@ This directory contains comprehensive technical documentation for the VaporFund 
 - **Business Model**: [WHITEPAPER.md](WHITEPAPER.md) - Revenue model and growth strategy
 - **Market Opportunity**: TAM/SAM/SOM analysis and competitive landscape
 - **Tokenomics**: Reward distribution and staking mechanics
-- **Roadmap**: Q1-Q4 2026 development milestones
+- **Product Roadmap**: [ROADMAP.md](ROADMAP.md) - Development milestones and feature releases
 - **Risk Management**: Security measures and mitigation strategies
+
+</details>
+
+<details>
+<summary><b>👤 Users & Stakers</b></summary>
+
+- **Getting Started**: [ARCHITECTURE.md](ARCHITECTURE.md) - Simple user journey and staking process
+- **Referral Program**: Earn rewards by inviting friends to stake on VaporFund
+- **Leaderboards**: Compete with other users for bonus rewards and recognition
+- **Supported Tokens**: Multi-token staking (ETH, USDC, USDT, and more)
+- **Wallet Integration**: Easy connection with MetaMask, WalletConnect, and popular wallets
+- **Security**: Your funds protected by MultiSig wallet and audited smart contracts
 
 </details>
 
 <details>
 <summary><b>🤝 Partners & Integrators</b></summary>
 
+- **Earning Programs**: [EARNING.md](EARNING.md) - Affiliate and partner commission structure
+- **Vapor Dashboard**: Dedicated dashboard for API keys, affiliate program, and widget management
 - **Technology Stack**: [ARCHITECTURE.md](ARCHITECTURE.md) - Technology partners and integrations
 - **API Documentation**: REST endpoints and WebSocket support
-- **Integration Guide**: How to integrate with VaporFund platform
+- **Integration Guide**: How to integrate with VaporFund platform using widgets and APIs
+- **Commission Tiers**: 10-40% revenue share with 100% Month 1 bonus
 - **Security Standards**: MultiSig, smart contract audits, and compliance
 
 </details>
@@ -159,6 +181,7 @@ We welcome contributions to improve our documentation!
 - **Smart Contracts**: [OpenZeppelin](https://docs.openzeppelin.com/) | [Solidity](https://docs.soliditylang.org/)
 - **Backend**: [NestJS](https://docs.nestjs.com/) | [TypeORM](https://typeorm.io/)
 - **Frontend**: [Next.js 14](https://nextjs.org/docs) | [RainbowKit](https://www.rainbowkit.com/)
+- **Vapor Dashboard**: [Next.js 15](https://nextjs.org/docs) | [ShadCN/UI](https://ui.shadcn.com/) | [TanStack Query](https://tanstack.com/query)
 - **Infrastructure**: [Kubernetes](https://kubernetes.io/docs/) | [GKE](https://cloud.google.com/kubernetes-engine/docs)
 
 ### 🔗 Live Deployments
@@ -178,7 +201,9 @@ We welcome contributions to improve our documentation!
 | ------------------- | ------- | ------------ |
 | **WHITEPAPER.md**   | v1.0    | 2025-10-30   |
 | **ARCHITECTURE.md** | v1.0    | 2025-10-30   |
-| **README.md**       | v1.1    | 2025-10-30   |
+| **EARNING.md**      | v1.0    | 2025-11-12   |
+| **ROADMAP.md**      | v1.0    | 2025-11-12   |
+| **README.md**       | v1.2    | 2025-11-12   |
 
 ---
 

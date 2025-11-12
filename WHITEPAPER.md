@@ -227,7 +227,7 @@ User Deposit → VaporFundStaking Contract → Immediate Transfer → MultiSig W
 
 **Gnosis Safe Integration**
 
-- M-of-N signature requirement (e.g., 3-of-5)
+- M-of-N signature requirement (e.g., 2-of-3)
 - Distributed key management
 - On-chain transaction approval
 - Time-locked operations for large transfers
@@ -331,7 +331,7 @@ User Deposit → VaporFundStaking Contract → Immediate Transfer → MultiSig W
 
 - User staking rankings by total value locked
 - Rewards multipliers for long-term stakers
-- NFT badges for milestone achievements
+- Achievement badges for milestone rewards
 - Referral program with on-chain rewards
 
 **Analytics Dashboard**

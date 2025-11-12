@@ -6,16 +6,18 @@ This document contains simplified visual diagrams designed for investors, partne
 
 ## 1. How VaporFund Works (Simple Overview)
 
-**What it shows:** The complete user journey from wallet connection to staking, showing how funds are secured in a MultiSig vault and tracked in real-time on the Ethereum blockchain.
+**What it shows:** The complete user journey from wallet connection to staking, showing how funds are secured in a MultiSig vault and tracked in real-time on the Ethereum blockchain. Partners can integrate staking into their own platforms via the Vapor Dashboard.
 
 ```mermaid
 graph LR
     subgraph Users
-        U["👤 You"]
+        U["👤 Direct Users"]
+        P["🤝 Partners"]
     end
 
     subgraph Platform["VaporFund Platform"]
         WEB["🌐 Web App - Easy Interface"]
+        PORTAL["👥 Vapor Dashboard - API & Widgets"]
         API["⚡ Smart Engine - AI-Powered"]
     end
 
@@ -28,13 +30,19 @@ graph LR
     end
 
     U -->|1. Connect Wallet| WEB
+    P -->|Integrate| PORTAL
     WEB -->|2. Stake Tokens| API
+    PORTAL -->|API/Widgets| API
     API -->|3. Secured in| SAFE
     SAFE -->|4. On-Chain| ETH
     ETH -.Real-time tracking.-> WEB
+    ETH -.Analytics.-> PORTAL
     WEB -.Dashboard.-> U
+    PORTAL -.Commissions & Stats.-> P
 
     style U fill:#e8e8e8,stroke:#333,stroke-width:2px,color:#000
+    style P fill:#d8d8d8,stroke:#333,stroke-width:2px,color:#000
+    style PORTAL fill:#d0d0d0,stroke:#333,stroke-width:2px,color:#000
     style SAFE fill:#b0b0b0,stroke:#333,stroke-width:3px,color:#000
     style ETH fill:#d0d0d0,stroke:#333,stroke-width:2px,color:#000
 ```
@@ -53,15 +61,13 @@ graph TB
 
     subgraph "Instant Protection"
         CONTRACT[📝 Smart Contract<br/>Verified Code]
-        MULTISIG[🔒 MultiSig Wallet<br/>3-of-5 Signatures Required]
+        MULTISIG[🔒 MultiSig Wallet<br/>2-of-3 Signatures Required]
     end
 
     subgraph "No Single Point of Failure"
         KEY1[🔑 Signer 1]
         KEY2[🔑 Signer 2]
         KEY3[🔑 Signer 3]
-        KEY4[🔑 Signer 4]
-        KEY5[🔑 Signer 5]
     end
 
     USER -->|Deposit| CONTRACT
@@ -70,11 +76,9 @@ graph TB
     MULTISIG --- KEY1
     MULTISIG --- KEY2
     MULTISIG --- KEY3
-    MULTISIG --- KEY4
-    MULTISIG --- KEY5
 
     Note1[❌ Funds NEVER held in contract]
-    Note2[✅ Requires 3 signatures to move]
+    Note2[✅ Requires 2 signatures to move]
     Note3[✅ No single person can access funds]
 
     style USER fill:#e8e8e8,stroke:#333,stroke-width:2px,color:#000
@@ -358,6 +362,397 @@ graph TB
     style ADV3 fill:#d0d0d0,stroke:#333,stroke-width:2px,color:#000
     style ADV4 fill:#e8e8e8,stroke:#333,stroke-width:2px,color:#000
     style ADV5 fill:#d8d8d8,stroke:#333,stroke-width:2px,color:#000
+```
+
+---
+
+## 11. Partner Integration Ecosystem
+
+**What it shows:** The comprehensive partner portal system enabling external developers and businesses to integrate VaporFund staking through APIs, embeddable widgets, and affiliate programs, with real-time analytics and commission tracking.
+
+```mermaid
+graph TB
+    subgraph Partners["External Partners"]
+        PARTNER["🤝 Partner Business<br>Website/App"]
+    end
+
+    subgraph Portal["Vapor Dashboard (port 3003)"]
+        LOGIN["🔐 Authentication<br>SIWE + OAuth2"]
+        DASHBOARD["📊 Analytics Dashboard<br>Real-time Stats"]
+        APIKEYS["🔑 API Key Management<br>Create & Revoke Keys"]
+        AFFILIATE["💰 Affiliate Program<br>Track Commissions"]
+        WIDGETS["🎨 Widget Builder<br>Embeddable Components"]
+    end
+
+    subgraph Integration["Integration Options"]
+        API["⚡ REST API<br>Backend Integration"]
+        EMBED["🌐 Widgets<br>Staking, Dashboard, Banner"]
+        LINKS["🔗 Affiliate Links<br>Campaign Tracking"]
+    end
+
+    subgraph Backend["VaporFund Backend"]
+        BE_API["🔧 Backend API<br>Data & Business Logic"]
+    end
+
+    PARTNER -->|Access| LOGIN
+    LOGIN --> DASHBOARD
+    LOGIN --> APIKEYS
+    LOGIN --> AFFILIATE
+    LOGIN --> WIDGETS
+
+    APIKEYS --> API
+    WIDGETS --> EMBED
+    AFFILIATE --> LINKS
+
+    API --> BE_API
+    EMBED --> BE_API
+    LINKS --> BE_API
+
+    BE_API -.Track Usage.-> DASHBOARD
+    BE_API -.Calculate Commissions.-> AFFILIATE
+
+    style PARTNER fill:#e8e8e8,stroke:#333,stroke-width:2px,color:#000
+    style LOGIN fill:#b0b0b0,stroke:#333,stroke-width:2px,color:#000
+    style DASHBOARD fill:#d8d8d8,stroke:#333,stroke-width:2px,color:#000
+    style API fill:#d0d0d0,stroke:#333,stroke-width:2px,color:#000
+    style EMBED fill:#e8e8e8,stroke:#333,stroke-width:2px,color:#000
+    style BE_API fill:#b8b8b8,stroke:#333,stroke-width:3px,color:#000
+```
+
+### Partner Benefits
+
+**What it shows:** The value proposition for partners including revenue sharing, white-label options, technical support, and enterprise-grade infrastructure.
+
+```mermaid
+graph TB
+    PORTAL["⭐ Vapor Dashboard"]
+
+    subgraph Benefits["What Partners Get"]
+        REV["💰 Revenue Sharing<br>Earn commissions on referrals"]
+        API_ACCESS["🔌 API Access<br>Full backend integration"]
+        WIDGETS_B["🎨 White-Label Widgets<br>Embed on your site"]
+        ANALYTICS["📊 Real-Time Analytics<br>Track performance"]
+        SUPPORT["🛠️ Developer Support<br>Technical assistance"]
+        ENTERPRISE["🏢 Enterprise Ready<br>Scalable infrastructure"]
+    end
+
+    subgraph Features["Key Features"]
+        F1["✅ Multiple widget types"]
+        F2["✅ Custom branding options"]
+        F3["✅ Usage tracking & metrics"]
+        F4["✅ Commission automation"]
+        F5["✅ One-time key display"]
+        F6["✅ Campaign tracking"]
+    end
+
+    PORTAL --> REV
+    PORTAL --> API_ACCESS
+    PORTAL --> WIDGETS_B
+    PORTAL --> ANALYTICS
+    PORTAL --> SUPPORT
+    PORTAL --> ENTERPRISE
+
+    REV --> F4
+    API_ACCESS --> F3
+    WIDGETS_B --> F1
+    WIDGETS_B --> F2
+    ANALYTICS --> F3
+    SUPPORT --> F5
+    ENTERPRISE --> F6
+
+    style PORTAL fill:#b8b8b8,stroke:#333,stroke-width:4px,color:#000
+    style REV fill:#b0b0b0,stroke:#333,stroke-width:2px,color:#000
+    style API_ACCESS fill:#d8d8d8,stroke:#333,stroke-width:2px,color:#000
+    style WIDGETS_B fill:#d0d0d0,stroke:#333,stroke-width:2px,color:#000
+    style ANALYTICS fill:#e8e8e8,stroke:#333,stroke-width:2px,color:#000
+```
+
+### Widget Integration Flow
+
+**What it shows:** The simple process for partners to embed VaporFund staking widgets on their websites, from creating the widget in the portal to displaying it live with full tracking.
+
+```
+Partner Creates Widget in Portal
+    ↓
+[Vapor Dashboard - Widget Builder]
+    ↓
+Generate Embed Code
+    ↓
+<script src="https://cdn.vaporfund.com/widget.js"></script>
+<div data-vaporfund-widget="staking" data-api-key="..."></div>
+    ↓
+[Partner Embeds on Their Website]
+    ↓
+[Users Stake Directly on Partner Site]
+    ↓
+[📊 Analytics & Commissions Tracked Automatically]
+```
+
+---
+
+## 12. User Referrals Program
+
+**What it shows:** The built-in referral system that allows users to earn rewards by inviting friends to stake on VaporFund, creating a viral growth loop with leaderboards and bonus incentives.
+
+```mermaid
+graph TB
+    subgraph Referrer["👤 You (Referrer)"]
+        USER["Existing User<br>Staking on VaporFund"]
+    end
+
+    subgraph Share["📤 Share & Invite"]
+        LINK["🔗 Generate Referral Link<br>vaporfund.com/r/ABC123"]
+        SOCIAL["📱 Share via Social<br>Twitter, Telegram, Discord"]
+    end
+
+    subgraph Friend["👥 Your Friends (Referees)"]
+        FRIEND1["Friend 1<br>Clicks Link"]
+        FRIEND2["Friend 2<br>Clicks Link"]
+        FRIEND3["Friend 3<br>Clicks Link"]
+    end
+
+    subgraph Action["⚡ Friends Stake"]
+        STAKE["💰 Complete First Stake<br>Minimum $100 USDC/ETH"]
+    end
+
+    subgraph Rewards["🎁 Earn Rewards"]
+        YOU_EARN["💎 You Earn:<br>5% of friend's staking amount"]
+        FRIEND_EARN["🎉 Friend Earns:<br>Bonus 2% on first stake"]
+    end
+
+    subgraph Tracking["📊 Track Performance"]
+        DASH["Dashboard<br>View referrals & earnings"]
+        LEADER["🏆 Leaderboard<br>Compete for top spots"]
+    end
+
+    USER --> LINK
+    LINK --> SOCIAL
+    SOCIAL --> FRIEND1
+    SOCIAL --> FRIEND2
+    SOCIAL --> FRIEND3
+
+    FRIEND1 --> STAKE
+    FRIEND2 --> STAKE
+    FRIEND3 --> STAKE
+
+    STAKE --> YOU_EARN
+    STAKE --> FRIEND_EARN
+
+    YOU_EARN --> DASH
+    DASH --> LEADER
+
+    style USER fill:#e8e8e8,stroke:#333,stroke-width:2px,color:#000
+    style LINK fill:#d0d0d0,stroke:#333,stroke-width:2px,color:#000
+    style STAKE fill:#b0b0b0,stroke:#333,stroke-width:2px,color:#000
+    style YOU_EARN fill:#b8b8b8,stroke:#333,stroke-width:3px,color:#000
+    style FRIEND_EARN fill:#d8d8d8,stroke:#333,stroke-width:2px,color:#000
+    style LEADER fill:#e0e0e0,stroke:#333,stroke-width:2px,color:#000
+```
+
+### Referral Rewards Structure
+
+**What it shows:** The tiered reward system where both referrers and referees benefit, with bonus multipliers for top performers and special campaigns.
+
+```mermaid
+graph TB
+    subgraph Tiers["🎯 Referral Tiers"]
+        T1["🥉 Bronze Tier<br>1-9 referrals<br>5% reward"]
+        T2["🥈 Silver Tier<br>10-49 referrals<br>7% reward"]
+        T3["🥇 Gold Tier<br>50-99 referrals<br>10% reward"]
+        T4["💎 Diamond Tier<br>100+ referrals<br>15% reward + bonuses"]
+    end
+
+    subgraph Benefits["✨ Additional Benefits"]
+        B1["🎁 Welcome Bonus<br>First 3 referrals get extra 1%"]
+        B2["📅 Monthly Competitions<br>Top 10 win cash prizes"]
+        B3["🏆 Annual Leaderboard<br>Top 3 win exclusive badges"]
+        B4["⚡ Flash Campaigns<br>Limited-time 2x rewards"]
+    end
+
+    subgraph Example["💰 Example Earnings"]
+        EX["Friend stakes $1,000 USDC<br>↓<br>You earn: $50-$150<br>Friend earns: $20 bonus<br>↓<br>Paid instantly in USDC"]
+    end
+
+    T1 --> T2
+    T2 --> T3
+    T3 --> T4
+
+    T4 --> B1
+    T4 --> B2
+    T4 --> B3
+    T4 --> B4
+
+    B1 --> EX
+    B2 --> EX
+    B3 --> EX
+    B4 --> EX
+
+    style T1 fill:#d8d8d8,stroke:#333,stroke-width:2px,color:#000
+    style T2 fill:#d0d0d0,stroke:#333,stroke-width:2px,color:#000
+    style T3 fill:#c8c8c8,stroke:#333,stroke-width:2px,color:#000
+    style T4 fill:#b0b0b0,stroke:#333,stroke-width:3px,color:#000
+    style EX fill:#e8e8e8,stroke:#333,stroke-width:2px,color:#000
+```
+
+### How Referral Tracking Works
+
+**What it shows:** The technical implementation of referral tracking from link generation to reward distribution, ensuring transparency and accurate attribution.
+
+```mermaid
+sequenceDiagram
+    participant User as 👤 User
+    participant Frontend as 🌐 Frontend
+    participant Backend as ⚡ Backend API
+    participant Blockchain as ⛓️ Smart Contract
+    participant DB as 💾 Database
+
+    Note over User,DB: Step 1: Generate Referral Link
+    User->>Frontend: Click "Get Referral Link"
+    Frontend->>Backend: POST /referrals/generate
+    Backend->>DB: Create unique referral code
+    DB-->>Backend: Return code: ABC123
+    Backend-->>Frontend: Return link: vaporfund.com/r/ABC123
+    Frontend-->>User: Display & copy link
+
+    Note over User,DB: Step 2: Friend Visits & Stakes
+    User->>Frontend: Share link with friend
+    Frontend->>Backend: GET /r/ABC123 (track click)
+    Backend->>DB: Store referral click event
+    Frontend->>Frontend: Friend connects wallet
+    Frontend->>Blockchain: Friend stakes $1,000 USDC
+    Blockchain-->>Backend: Emit StakeEvent
+
+    Note over User,DB: Step 3: Calculate & Distribute Rewards
+    Backend->>DB: Match wallet to referral code
+    Backend->>Backend: Calculate rewards (5% = $50)
+    Backend->>Blockchain: Request withdrawal allocation
+    Blockchain-->>Backend: Rewards allocated
+    Backend->>DB: Update referral stats
+    Backend-->>User: Notify: "You earned $50!"
+    Backend-->>User: Update leaderboard position
+
+    Note over User,DB: Step 4: Track Performance
+    User->>Frontend: View referral dashboard
+    Frontend->>Backend: GET /referrals/stats
+    Backend->>DB: Fetch referral data
+    DB-->>Backend: Return stats
+    Backend-->>Frontend: Display earnings & rank
+    Frontend-->>User: Show: 3 referrals, $150 earned, Rank #42
+```
+
+### Leaderboard & Competition System
+
+**What it shows:** The gamification elements that encourage user engagement through competitive leaderboards, rankings, and special prizes.
+
+```mermaid
+graph TB
+    subgraph Rankings["🏆 Leaderboard Rankings"]
+        DAILY["📅 Daily Leaderboard<br>Top 10 users<br>Updated hourly"]
+        WEEKLY["📆 Weekly Leaderboard<br>Top 25 users<br>Resets Monday"]
+        MONTHLY["📊 Monthly Leaderboard<br>Top 50 users<br>Winner announced 1st"]
+        ALLTIME["⭐ All-Time Leaders<br>Hall of Fame<br>Lifetime tracking"]
+    end
+
+    subgraph Prizes["🎁 Competition Prizes"]
+        P1["🥇 1st Place<br>$500 USDC + Exclusive Badge"]
+        P2["🥈 2nd Place<br>$300 USDC"]
+        P3["🥉 3rd Place<br>$200 USDC"]
+        P4["🎖️ 4th-10th<br>$50 USDC each"]
+    end
+
+    subgraph Display["📱 Dashboard Features"]
+        D1["📈 Real-time rank updates"]
+        D2["📊 Referral statistics"]
+        D3["💰 Total earnings"]
+        D4["🔔 Achievement notifications"]
+        D5["📜 Referral history"]
+    end
+
+    DAILY --> P1
+    WEEKLY --> P2
+    MONTHLY --> P3
+    ALLTIME --> P4
+
+    P1 --> D1
+    P2 --> D2
+    P3 --> D3
+    P4 --> D4
+    D4 --> D5
+
+    style DAILY fill:#d8d8d8,stroke:#333,stroke-width:2px,color:#000
+    style MONTHLY fill:#d0d0d0,stroke:#333,stroke-width:2px,color:#000
+    style P1 fill:#b0b0b0,stroke:#333,stroke-width:3px,color:#000
+    style P2 fill:#c0c0c0,stroke:#333,stroke-width:2px,color:#000
+    style P3 fill:#c8c8c8,stroke:#333,stroke-width:2px,color:#000
+    style D1 fill:#e8e8e8,stroke:#333,stroke-width:2px,color:#000
+```
+
+### Simple Referral Flow
+
+**What it shows:** A simplified step-by-step process showing how easy it is for users to refer friends and start earning rewards immediately.
+
+```
+User Journey: From Share to Earn
+
+1️⃣ Get Your Link
+   [Dashboard] → "Referrals" → "Get Link"
+   → Copy: vaporfund.com/r/ABC123
+
+2️⃣ Share Everywhere
+   📱 Twitter/X
+   💬 Telegram groups
+   🎮 Discord servers
+   ✉️ Email to friends
+   📝 Blog posts
+
+3️⃣ Friend Signs Up
+   Clicks your link → Connects wallet
+   → Stakes $500 USDC
+
+4️⃣ Instant Rewards
+   ✅ You earn: $25 USDC (5%)
+   ✅ Friend earns: $10 bonus (2%)
+   ✅ Leaderboard: Move up 5 spots
+
+5️⃣ Keep Growing
+   Track stats in real-time
+   → Climb leaderboard tiers
+   → Unlock higher rewards
+   → Win monthly competitions
+```
+
+### Key Features Summary
+
+**What it shows:** Overview of all referral program features ensuring transparency, fairness, and maximum earning potential for users.
+
+```mermaid
+mindmap
+  root((User Referrals))
+    Earning
+      5-15% rewards
+      Instant payouts
+      Multiple tokens
+      No limits
+    Tracking
+      Unique links
+      Click analytics
+      Conversion rates
+      Lifetime value
+    Gamification
+      Leaderboards
+      Tier system
+      Achievements
+      Exclusive badges
+    Transparency
+      Real-time stats
+      On-chain verification
+      Public leaderboards
+      Audit trail
+    Benefits
+      Win-win model
+      Passive income
+      Community growth
+      Network effects
 ```
 
 ---
