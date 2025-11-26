@@ -54,36 +54,44 @@ graph LR
 **What it shows:** The multi-layered security architecture where deposits are immediately transferred from smart contracts to a 2-of-3 MultiSig wallet, ensuring no single person can access funds without multiple approvals.
 
 ```mermaid
-graph TB
-    subgraph "Your Deposit"
+flowchart TB
+    subgraph Deposit["Your Deposit"]
         USER[💰 Your Crypto]
     end
 
-    subgraph "Instant Protection"
+    subgraph Protection["Instant Protection"]
         CONTRACT[📝 Smart Contract<br/>Verified Code]
         MULTISIG[🔒 MultiSig Wallet<br/>2-of-3 Signatures Required]
     end
 
-    subgraph "No Single Point of Failure"
+    subgraph Security["No Single Point of Failure"]
         KEY1[🔑 Signer 1]
         KEY2[🔑 Signer 2]
         KEY3[🔑 Signer 3]
     end
 
-    USER -->|Deposit| CONTRACT
-    CONTRACT -->|Instantly Transferred| MULTISIG
+    subgraph Notes["Security Features"]
+        N1["❌ Funds NEVER held in contract"]
+        N2["✅ Requires 2 signatures to move"]
+        N3["✅ No single person can access funds"]
+    end
 
-    MULTISIG --- KEY1
-    MULTISIG --- KEY2
-    MULTISIG --- KEY3
+    USER -->|1. Deposit| CONTRACT
+    CONTRACT -->|2. Instantly Transferred| MULTISIG
 
-    Note1[❌ Funds NEVER held in contract]
-    Note2[✅ Requires 2 signatures to move]
-    Note3[✅ No single person can access funds]
+    MULTISIG ---|Must approve| KEY1
+    MULTISIG ---|Must approve| KEY2
+    MULTISIG ---|Must approve| KEY3
 
     style USER fill:#e8e8e8,stroke:#333,stroke-width:2px,color:#000
-    style MULTISIG fill:#b0b0b0,stroke:#333,stroke-width:4px,color:#000
     style CONTRACT fill:#d0d0d0,stroke:#333,stroke-width:2px,color:#000
+    style MULTISIG fill:#b0b0b0,stroke:#333,stroke-width:4px,color:#000
+    style KEY1 fill:#c0c0c0,stroke:#333,stroke-width:2px,color:#000
+    style KEY2 fill:#c0c0c0,stroke:#333,stroke-width:2px,color:#000
+    style KEY3 fill:#c0c0c0,stroke:#333,stroke-width:2px,color:#000
+    style N1 fill:#ffe6e6,stroke:#cc0000,stroke-width:2px,color:#000
+    style N2 fill:#e6ffe6,stroke:#00cc00,stroke-width:2px,color:#000
+    style N3 fill:#e6ffe6,stroke:#00cc00,stroke-width:2px,color:#000
 ```
 
 ---
