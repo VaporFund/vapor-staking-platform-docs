@@ -47,6 +47,7 @@ This directory contains comprehensive technical documentation for the VaporFund 
 | **[WHITEPAPER.md](WHITEPAPER.md)**     | Platform vision, business model, and tokenomics | Investors, Stakeholders, General Public |
 | **[ARCHITECTURE.md](ARCHITECTURE.md)** | Technical architecture and visual diagrams      | Developers, Partners, Technical Teams   |
 | **[EARNING.md](EARNING.md)**           | Affiliate and partner earning programs          | Affiliates, Partners, Content Creators  |
+| **[REFERRALS.md](REFERRALS.md)**       | User referral program and reward structure      | Users, Ambassadors, Community Members   |
 | **[ROADMAP.md](ROADMAP.md)**           | Product roadmap and development milestones      | Stakeholders, Investors, Community      |
 
 ---
@@ -66,6 +67,13 @@ This directory contains comprehensive technical documentation for the VaporFund 
 2. Review tokenomics and reward distribution model
 3. Check **[ROADMAP.md](ROADMAP.md)** for development milestones
 4. Understand security architecture and risk management
+
+### For Users & Community Members
+
+1. Start with **[REFERRALS.md](REFERRALS.md)** to learn about the referral program
+2. Understand reward tiers and commission structure
+3. Generate your unique referral link
+4. Track your referral performance and earnings
 
 ### For Operations Teams
 
@@ -107,7 +115,8 @@ This directory contains comprehensive technical documentation for the VaporFund 
 <summary><b>👤 Users & Stakers</b></summary>
 
 - **Getting Started**: [ARCHITECTURE.md](ARCHITECTURE.md) - Simple user journey and staking process
-- **Referral Program**: Earn rewards by inviting friends to stake on VaporFund
+- **Referral Program**: [REFERRALS.md](REFERRALS.md) - Earn rewards by inviting friends to stake
+- **Reward Tiers**: Bronze to Platinum with 5-15% commission rates
 - **Leaderboards**: Compete with other users for bonus rewards and recognition
 - **Supported Tokens**: Multi-token staking (ETH, USDC, USDT, and more)
 - **Wallet Integration**: Easy connection with MetaMask, WalletConnect, and popular wallets
@@ -202,8 +211,9 @@ We welcome contributions to improve our documentation!
 | **WHITEPAPER.md**   | v1.0    | 2025-10-30   |
 | **ARCHITECTURE.md** | v1.0    | 2025-10-30   |
 | **EARNING.md**      | v1.0    | 2025-11-12   |
+| **REFERRALS.md**    | v1.0    | 2025-11-26   |
 | **ROADMAP.md**      | v1.0    | 2025-11-12   |
-| **README.md**       | v1.2    | 2025-11-12   |
+| **README.md**       | v1.3    | 2025-11-26   |
 
 ---
 
