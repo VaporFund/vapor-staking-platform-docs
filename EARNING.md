@@ -498,6 +498,7 @@ A: Yes, 1099-MISC for US partners earning $600+/year. International partners rec
 **Platform Overview:**
 - **[[WHITEPAPER]]** - Platform vision, business model, and tokenomics
 - **[[ARCHITECTURE]]** - Technical architecture and system design
+- **[[SECURITY]]** - Security architecture, audits, and best practices
 - **[[ROADMAP]]** - Product roadmap and development milestones
 
 **For Users:**

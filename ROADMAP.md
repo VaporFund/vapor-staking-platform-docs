@@ -536,6 +536,7 @@ By Q4 2027, we aim to have:
 **Platform Overview:**
 - **[[WHITEPAPER]]** - Platform vision, business model, and tokenomics
 - **[[ARCHITECTURE]]** - Technical architecture and system design
+- **[[SECURITY]]** - Security architecture, audits, and best practices
 
 **Earning Opportunities:**
 - **[[EARNING]]** - Partner and affiliate earning programs

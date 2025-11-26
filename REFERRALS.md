@@ -329,6 +329,7 @@ A: Yes, all rewards are tracked on-chain and secured by smart contracts. You mai
 
 - **[[WHITEPAPER]]** - Platform overview and tokenomics
 - **[[ARCHITECTURE]]** - Technical architecture and smart contracts
+- **[[SECURITY]]** - Security architecture and best practices
 - **[[EARNING]]** - Partner and affiliate earning programs
 - **[[README]]** - Quick start guide and documentation index
 

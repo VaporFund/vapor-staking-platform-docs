@@ -858,6 +858,7 @@ pie title Where Your Money Goes
 
 **Business Overview:**
 - **[[WHITEPAPER]]** - Platform vision, business model, and tokenomics
+- **[[SECURITY]]** - Security architecture, audits, and best practices
 - **[[ROADMAP]]** - Product roadmap and development milestones
 
 **Earning Opportunities:**

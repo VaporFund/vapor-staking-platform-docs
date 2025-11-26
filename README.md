@@ -46,6 +46,7 @@ This directory contains comprehensive technical documentation for the VaporFund 
 | -------------------------------------- | ----------------------------------------------- | --------------------------------------- |
 | **[WHITEPAPER.md](WHITEPAPER.md)**     | Platform vision, business model, and tokenomics | Investors, Stakeholders, General Public |
 | **[ARCHITECTURE.md](ARCHITECTURE.md)** | Technical architecture and visual diagrams      | Developers, Partners, Technical Teams   |
+| **[SECURITY.md](SECURITY.md)**         | Security architecture and best practices        | Everyone - Users, Developers, Auditors  |
 | **[EARNING.md](EARNING.md)**           | Affiliate and partner earning programs          | Affiliates, Partners, Content Creators  |
 | **[REFERRALS.md](REFERRALS.md)**       | User referral program and reward structure      | Users, Ambassadors, Community Members   |
 | **[ROADMAP.md](ROADMAP.md)**           | Product roadmap and development milestones      | Stakeholders, Investors, Community      |
@@ -57,9 +58,9 @@ This directory contains comprehensive technical documentation for the VaporFund 
 ### For Developers
 
 1. Start with **[ARCHITECTURE.md](ARCHITECTURE.md)** for technical implementation details
-2. Review the smart contract architecture section
-3. Check API specifications and deployment procedures
-4. See infrastructure setup for local development
+2. Review **[SECURITY.md](SECURITY.md)** for security architecture and best practices
+3. Check smart contract specifications and API documentation
+4. See infrastructure setup and deployment procedures
 
 ### For Stakeholders & Investors
 
@@ -90,6 +91,7 @@ This directory contains comprehensive technical documentation for the VaporFund 
 <summary><b>🔧 Developers & Engineers</b></summary>
 
 - **Architecture Overview**: [ARCHITECTURE.md](ARCHITECTURE.md) - System design and component interaction
+- **Security Architecture**: [SECURITY.md](SECURITY.md) - Multi-layered security, smart contract security, infrastructure hardening
 - **Smart Contracts**: Solidity contract specifications and deployment
 - **Backend API**: NestJS architecture and endpoint documentation
 - **Frontend**: Next.js 14 App Router implementation with Web3 wallet integration
@@ -115,12 +117,13 @@ This directory contains comprehensive technical documentation for the VaporFund 
 <summary><b>👤 Users & Stakers</b></summary>
 
 - **Getting Started**: [ARCHITECTURE.md](ARCHITECTURE.md) - Simple user journey and staking process
+- **Security Guide**: [SECURITY.md](SECURITY.md) - How your funds are protected and best practices
 - **Referral Program**: [REFERRALS.md](REFERRALS.md) - Earn rewards by inviting friends to stake
 - **Reward Tiers**: Bronze to Platinum with 5-15% commission rates
 - **Leaderboards**: Compete with other users for bonus rewards and recognition
 - **Supported Tokens**: Multi-token staking (ETH, USDC, USDT, and more)
 - **Wallet Integration**: Easy connection with MetaMask, WalletConnect, and popular wallets
-- **Security**: Your funds protected by MultiSig wallet and audited smart contracts
+- **Fund Protection**: MultiSig wallet custody and non-upgradeable smart contracts
 
 </details>
 
@@ -210,10 +213,11 @@ We welcome contributions to improve our documentation!
 | ------------------- | ------- | ------------ |
 | **WHITEPAPER.md**   | v1.0    | 2025-10-30   |
 | **ARCHITECTURE.md** | v1.0    | 2025-10-30   |
+| **SECURITY.md**     | v1.0    | 2025-11-26   |
 | **EARNING.md**      | v1.0    | 2025-11-12   |
 | **REFERRALS.md**    | v1.0    | 2025-11-26   |
 | **ROADMAP.md**      | v1.0    | 2025-11-12   |
-| **README.md**       | v1.3    | 2025-11-26   |
+| **README.md**       | v1.4    | 2025-11-26   |
 
 ---
 

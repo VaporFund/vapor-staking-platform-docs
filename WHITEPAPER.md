@@ -578,6 +578,7 @@ As the platform evolves through our roadmap—from leaderboards to EtherFi resta
 
 **For Technical Details:**
 - **[[ARCHITECTURE]]** - Technical architecture, smart contracts, and system design
+- **[[SECURITY]]** - Security architecture, audits, and best practices
 - **[[ROADMAP]]** - Product roadmap and development milestones
 
 **For Earning Opportunities:**
