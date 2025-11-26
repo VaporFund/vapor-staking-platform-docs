@@ -27,7 +27,10 @@ The VaporFund Referral Program rewards users for inviting friends and community 
 
 ### Key Benefits
 
-- **Passive Income**: Earn rewards from your referees' staking activities
+- **High Commission Rates**: Earn 10-40% commission based on your tier
+- **100% Month 1 Bonus**: Double your earnings in the first month for every referral
+- **Dual Tier System**: Qualify by referral count OR total volume
+- **Passive Income**: Earn ongoing monthly rewards from your referees' staking
 - **No Limits**: Unlimited number of referrals
 - **Transparent Tracking**: Real-time dashboard showing all referral activity
 - **Instant Attribution**: Referrals automatically linked to your account
@@ -75,27 +78,53 @@ You'll automatically start earning referral rewards based on their staking activ
 
 ### Reward Structure
 
-| Tier | Referral Count | Commission Rate | Bonus |
-|------|----------------|----------------|-------|
-| **Bronze** | 1-10 referrals | 5% | - |
-| **Silver** | 11-50 referrals | 7% | +2% on all previous referrals |
-| **Gold** | 51-100 referrals | 10% | +5% on all previous referrals |
-| **Platinum** | 101+ referrals | 15% | +10% on all previous referrals |
+| Tier | Requirements | Commission Rate | Month 1 Bonus |
+|------|--------------|----------------|---------------|
+| 🥉 **Bronze** | 0-9 referrals<br/>OR $0-$50K volume | **10%** | **100%** |
+| 🥈 **Silver** | 10+ referrals<br/>OR $50K+ volume | **20%** | **100%** |
+| 🥇 **Gold** | 25+ referrals<br/>OR $200K+ volume | **30%** | **100%** |
+| 💎 **Diamond** | 50+ referrals<br/>OR $1M+ volume | **40%** | **100%** |
+
+**Important Notes:**
+- Tiers are determined by **either** referral count OR total volume (whichever qualifies you for a higher tier)
+- All tiers receive **100% of commission in Month 1** for each new referral
+- Regular commission rates apply from Month 2 onwards
+- Volume = Total staking amount from all your referrals
 
 ### How Rewards Are Calculated
 
-Referral rewards are calculated based on your referees' **staking rewards**:
+Referral rewards are calculated based on **platform profit** (the 10% fee VaporFund keeps from staking rewards):
 
 ```
-Your Referral Reward = Referee's Staking Reward × Your Commission Rate
+Platform Monthly Profit = (Stake Amount × APY) / 12 months
+Your Referral Reward = Platform Profit × Your Commission Rate
 ```
 
-**Example:**
+**Example 1: Bronze Tier (10%)**
 
-- Your referee stakes 1,000 USDC
-- They earn 50 USDC in staking rewards (5% APY)
-- Your commission rate is 10% (Gold Tier)
-- **You earn: 50 × 10% = 5 USDC**
+- Your referee stakes $5,000 for 12 months
+- Annual profit: $5,000 × 3% APY = $150
+- Monthly profit: $150 / 12 = $12.50
+- **Month 1 (100% bonus)**: $12.50 × 100% = **$12.50**
+- **Months 2-12 (10% rate)**: $12.50 × 10% = $1.25/month × 11 = **$13.75**
+- **Total Year 1**: $26.25
+
+**Example 2: Silver Tier (20%)**
+
+- Friend stakes $10,000 for 12 months
+- Annual profit: $10,000 × 3% = $300
+- Monthly profit: $25
+- **Month 1**: $25 × 100% = **$25**
+- **Months 2-12**: $25 × 20% = $5/month × 11 = **$55**
+- **Total Year 1**: $80
+
+**Example 3: Diamond Tier (40%)**
+
+- Friend stakes $10,000 for 12 months
+- Monthly profit: $25
+- **Month 1**: $25 × 100% = **$25**
+- **Months 2-12**: $25 × 40% = $10/month × 11 = **$110**
+- **Total Year 1**: $135
 
 ### Reward Distribution
 
@@ -259,7 +288,7 @@ A: Yes! You can enable auto-compounding to automatically restake your referral r
 A: 10 USD equivalent across all tokens. Rewards below this threshold will accumulate until you reach it.
 
 **Q: How are tier upgrades applied?**
-A: Tier upgrades are automatic and apply to all future rewards. The bonus commission also applies retroactively to your existing referrals.
+A: Tier upgrades are automatic based on your referral count or total volume. When you reach a new tier, the higher commission rate applies to all future rewards from all your referrals (both existing and new).
 
 ### Technical Questions
 
