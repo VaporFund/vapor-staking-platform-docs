@@ -17,7 +17,6 @@
 - [Infrastructure Security](#infrastructure-security)
 - [Operational Security](#operational-security)
 - [Vulnerability Disclosure](#vulnerability-disclosure)
-- [Bug Bounty Program](#bug-bounty-program)
 - [Security Audits](#security-audits)
 - [Incident Response](#incident-response)
 - [Compliance & Certifications](#compliance--certifications)
@@ -40,7 +39,6 @@ VaporFund employs a multi-layered security architecture designed to protect user
 - ✅ **Battle-Tested Code** - Built on OpenZeppelin security standards
 - ✅ **Encrypted Communications** - TLS 1.3 encryption for all data in transit
 - ✅ **Regular Audits** - Continuous security assessments and third-party audits
-- 🔄 **Bug Bounty Program** - Launching Q1 2026 with competitive rewards
 
 ---
 
@@ -574,7 +572,6 @@ We take security vulnerabilities seriously and appreciate the security research 
 **Contact Methods:**
 
 - **Email:** security@vaporfund.com (PGP key available)
-- **HackerOne:** hackerone.com/vaporfund (launching Q1 2026)
 - **Keybase:** @vaporfund
 
 **Information to Include:**
@@ -598,7 +595,6 @@ We take security vulnerabilities seriously and appreciate the security research 
 **Recognition:**
 
 - Public acknowledgment (if desired)
-- Bug bounty rewards (launching Q1 2026)
 - Hall of Fame listing on our website
 - Direct communication with security team
 
@@ -630,50 +626,6 @@ VaporFund commits to:
 - Work with researchers to understand and fix vulnerabilities
 - Recognize and reward responsible disclosure
 - Keep researcher information confidential (unless they opt for public recognition)
-
----
-
-## Bug Bounty Program
-
-### Program Launch
-
-**Status:** Launching Q1 2026
-**Platform:** HackerOne
-**Total Bounty Pool:** $100,000+ annually
-
-### Reward Structure (Planned)
-
-| Severity | Smart Contract | Backend/Frontend | Infrastructure |
-|----------|---------------|------------------|----------------|
-| **Critical** | $10,000 - $50,000 | $5,000 - $25,000 | $2,500 - $10,000 |
-| **High** | $5,000 - $10,000 | $2,500 - $5,000 | $1,000 - $2,500 |
-| **Medium** | $1,000 - $5,000 | $500 - $2,500 | $250 - $1,000 |
-| **Low** | $100 - $1,000 | $50 - $500 | $25 - $250 |
-
-### Severity Classification
-
-**Critical:**
-- Direct theft of user funds
-- Unauthorized fund withdrawal
-- Smart contract takeover
-- Private key exposure
-
-**High:**
-- Temporary freeze of funds
-- Manipulation of withdrawal allocations
-- Authentication bypass
-- Unauthorized admin access
-
-**Medium:**
-- Information disclosure (PII)
-- Rate limiting bypass
-- Session hijacking
-- CSRF on sensitive operations
-
-**Low:**
-- Minor information disclosure
-- Non-exploitable security misconfigurations
-- Security best practice violations
 
 ---
 
