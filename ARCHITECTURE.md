@@ -846,6 +846,21 @@ pie title Where Your Money Goes
 
 ---
 
+## Related Documentation
+
+**Business Overview:**
+- **[[WHITEPAPER]]** - Platform vision, business model, and tokenomics
+- **[[ROADMAP]]** - Product roadmap and development milestones
+
+**Earning Opportunities:**
+- **[[EARNING]]** - Partner and affiliate earning programs
+- **[[REFERRALS]]** - User referral program and rewards
+
+**Main Index:**
+- **[[README]]** - Documentation overview and quick start guide
+
+---
+
 **Last Updated**: October 2025
 **Version**: 1.0 External
 **Audience**: Investors, Partners, Media, General Public
