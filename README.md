@@ -1,6 +1,6 @@
 # VaporFund Staking Platform Documentation
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/vaporfund/vaporfund-staking-platform)
+[![Version](https://img.shields.io/badge/version-1.2.0-blue.svg)](https://github.com/vaporfund/vaporfund-staking-platform)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
 
@@ -214,10 +214,10 @@ We welcome contributions to improve our documentation!
 | **WHITEPAPER.md**   | v1.0    | 2025-10-30   |
 | **ARCHITECTURE.md** | v1.0    | 2025-10-30   |
 | **SECURITY.md**     | v1.0    | 2025-11-26   |
-| **EARNING.md**      | v1.0    | 2025-11-12   |
+| **EARNING.md**      | v1.1    | 2025-12-16   |
 | **REFERRALS.md**    | v1.0    | 2025-11-26   |
-| **ROADMAP.md**      | v1.0    | 2025-11-12   |
-| **README.md**       | v1.4    | 2025-11-26   |
+| **ROADMAP.md**      | v1.1    | 2025-12-16   |
+| **README.md**       | v1.5    | 2025-12-16   |
 
 ---
 

@@ -163,12 +163,16 @@ For businesses, platforms, and developers integrating VaporFund.
 
 ```html
 <!-- Simple embed -->
-<script src="https://cdn.vaporfund.com/widget.js"></script>
-<div
-  data-vaporfund-widget="staking"
-  data-api-key="your_api_key"
-  data-referral-code="your_code"
-></div>
+<script src="https://cdn-staking.vaporfund.co/widget/vaporfund-widget.min.js"></script>
+<script>
+  VaporWidget.init({
+    container: '#vapor-staking',
+    apiKey: 'your_api_key',
+    referralCode: 'your_code',
+    theme: 'dark'
+  });
+</script>
+<div id="vapor-staking"></div>
 ```
 
 ### Earning Example (Gold Tier - 30%)
@@ -534,6 +538,6 @@ A: Yes, 1099-MISC for US partners earning $600+/year. International partners rec
 
 Made with ❤️ by the VaporFund Team
 
-**Last Updated:** November 2025 | **Version:** 1.0
+**Last Updated:** December 2025 | **Version:** 1.1
 
 </div>
